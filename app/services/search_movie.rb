@@ -1,11 +1,11 @@
+require 'themoviedb-api'
 require 'dotenv'
-require 'themoviedb'
+Dotenv.load('.env')
 
 class SearchMovie
 
   def search
-    config = Tmdb::Api.key("KEY_HERE")
-    Tmdb::Api.language("fr")
+     Tmdb::Api.key("KEY_HERE")
 
     @search = Tmdb::Search.new
     @search.resource('person') # determines type of resource
